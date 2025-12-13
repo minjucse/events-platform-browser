@@ -19,11 +19,11 @@ import type { UserRole } from "@/lib/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Building,
+  CalendarCheck,
   Eye,
   EyeOff,
   Lock,
   Mail,
-  Sparkles,
   User,
 } from "lucide-react";
 import Link from "next/link";
@@ -128,11 +128,13 @@ export default function RegisterPage() {
   return (
     <div className="space-y-6">
       {/* Mobile logo */}
-      <Link href="/" className="flex items-center gap-2 lg:hidden">
-        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-          <Sparkles className="h-5 w-5 text-primary-foreground" />
+      <Link href="/" className="flex items-center gap-2 mr-8 flex-shrink-0">
+        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-400 to-blue-600 text-white shadow-lg shadow-cyan-400/50">
+          <CalendarCheck className="h-5 w-5" />
         </div>
-        <span className="text-xl font-bold gradient-text">EventMate</span>
+        <span className="hidden font-bold sm:inline-block text-lg bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
+          EventMate
+        </span>
       </Link>
 
       <div className="space-y-2">
@@ -158,11 +160,10 @@ export default function RegisterPage() {
             >
               <Label
                 htmlFor="role-user"
-                className={`flex items-center gap-3 rounded-lg border-2 p-4 cursor-pointer transition-colors ${
-                  roleValue === "USER"
+                className={`flex items-center gap-3 rounded-lg border-2 p-4 cursor-pointer transition-colors ${roleValue === "USER"
                     ? "border-primary bg-primary/5"
                     : "border-border hover:border-primary/50"
-                }`}
+                  }`}
               >
                 <RadioGroupItem
                   value="USER"
@@ -179,11 +180,10 @@ export default function RegisterPage() {
               </Label>
               <Label
                 htmlFor="role-host"
-                className={`flex items-center gap-3 rounded-lg border-2 p-4 cursor-pointer transition-colors ${
-                  roleValue === "HOST"
+                className={`flex items-center gap-3 rounded-lg border-2 p-4 cursor-pointer transition-colors ${roleValue === "HOST"
                     ? "border-primary bg-primary/5"
                     : "border-border hover:border-primary/50"
-                }`}
+                  }`}
               >
                 <RadioGroupItem
                   value="HOST"

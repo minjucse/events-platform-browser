@@ -7,7 +7,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useAuth } from "@/lib/auth-context";
-import { Eye, EyeOff, Lock, Mail, Sparkles } from "lucide-react";
+import { CalendarCheck, Eye, EyeOff, Lock, Mail} from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -43,11 +43,13 @@ export default function LoginPage() {
   return (
     <div className="space-y-8">
       {/* Mobile logo */}
-      <Link href="/" className="flex items-center gap-2 lg:hidden">
-        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-          <Sparkles className="h-5 w-5 text-primary-foreground" />
+      <Link href="/" className="flex items-center gap-2 mr-8 flex-shrink-0">
+        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-400 to-blue-600 text-white shadow-lg shadow-cyan-400/50">
+          <CalendarCheck className="h-5 w-5" />
         </div>
-        <span className="text-xl font-bold gradient-text">EventMate</span>
+        <span className="hidden font-bold sm:inline-block text-lg bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
+          EventMate
+        </span>
       </Link>
 
       <div className="space-y-2">
