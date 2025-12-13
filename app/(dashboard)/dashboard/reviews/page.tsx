@@ -1,6 +1,6 @@
 "use client";
 
-import { GlowCard } from "@/components/glow-card";
+import { HoverEffectCard } from "@/components/hoverEffect-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
@@ -160,7 +160,7 @@ export default function ReviewsPage() {
 
       {/* Stats */}
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <GlowCard className="p-5">
+        <HoverEffectCard className="p-5">
           <div className="flex items-center gap-3">
             <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
               <Star className="h-6 w-6 text-primary fill-primary" />
@@ -170,8 +170,8 @@ export default function ReviewsPage() {
               <p className="text-sm text-muted-foreground">Average Rating</p>
             </div>
           </div>
-        </GlowCard>
-        <GlowCard className="p-5 col-span-1 sm:col-span-1 lg:col-span-3">
+        </HoverEffectCard>
+        <HoverEffectCard className="p-5 col-span-1 sm:col-span-1 lg:col-span-3">
           <h3 className="font-medium mb-3">Rating Distribution</h3>
           <div className="space-y-2">
             {ratingDistribution.map(({ rating, count, percentage }) => (
@@ -192,7 +192,7 @@ export default function ReviewsPage() {
               </div>
             ))}
           </div>
-        </GlowCard>
+        </HoverEffectCard>
       </div>
 
       {/* Filters */}
@@ -230,12 +230,12 @@ export default function ReviewsPage() {
       {/* Reviews List */}
       <div className="space-y-4">
         {isLoading ? (
-          <GlowCard className="text-center py-12">
+          <HoverEffectCard className="text-center py-12">
             <p>Loading reviews...</p>
-          </GlowCard>
+          </HoverEffectCard>
         ) : reviews.length > 0 ? (
           reviews.map((review) => (
-            <GlowCard key={review.id}>
+            <HoverEffectCard key={review.id}>
                 <div className="flex flex-col sm:flex-row sm:items-start gap-4">
                   <Avatar className="h-10 w-10">
                     <AvatarImage
@@ -335,10 +335,10 @@ export default function ReviewsPage() {
                     </p>
                   </div>
                 </div>
-              </GlowCard>
+              </HoverEffectCard>
             ))
         ) : (
-          <GlowCard className="text-center py-12">
+          <HoverEffectCard className="text-center py-12">
             <Star className="h-12 w-12 text-muted-foreground/50 mx-auto mb-4" />
             <h3 className="font-semibold">No reviews found</h3>
             <p className="text-sm text-muted-foreground mt-1">
@@ -346,7 +346,7 @@ export default function ReviewsPage() {
                 ? "Try adjusting your filters"
                 : "No reviews to display yet"}
             </p>
-          </GlowCard>
+          </HoverEffectCard>
         )}
       </div>
 

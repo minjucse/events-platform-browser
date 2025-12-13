@@ -1,6 +1,6 @@
 "use client";
 
-import { GlowCard } from "@/components/glow-card";
+import { HoverEffectCard } from "@/components/hoverEffect-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -98,13 +98,13 @@ export function AdminDashboard() {
       <div className="space-y-6">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {Array.from({ length: 4 }).map((_, i) => (
-            <GlowCard key={i} className="p-5">
+            <HoverEffectCard key={i} className="p-5">
               <div className="animate-pulse space-y-3">
                 <div className="h-10 w-10 bg-muted rounded-lg" />
                 <div className="h-6 w-16 bg-muted rounded" />
                 <div className="h-4 w-20 bg-muted rounded" />
               </div>
-            </GlowCard>
+            </HoverEffectCard>
           ))}
         </div>
       </div>
@@ -125,7 +125,7 @@ export function AdminDashboard() {
       {/* Stats Grid */}
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {stats.map((stat) => (
-          <GlowCard key={stat.label} className="p-5">
+          <HoverEffectCard key={stat.label} className="p-5">
             <div className="flex items-center justify-between">
               <div
                 className={`flex h-10 w-10 items-center justify-center rounded-lg bg-muted`}
@@ -141,12 +141,12 @@ export function AdminDashboard() {
               <p className="text-2xl font-bold">{stat.value}</p>
               <p className="text-sm text-muted-foreground">{stat.label}</p>
             </div>
-          </GlowCard>
+          </HoverEffectCard>
         ))}
       </div>
 
       {/* Platform Health */}
-      <GlowCard>
+      <HoverEffectCard>
         <h2 className="font-semibold text-lg mb-4">Platform Health</h2>
         <div className="grid gap-4 sm:grid-cols-3">
           <div className="space-y-2">
@@ -171,11 +171,11 @@ export function AdminDashboard() {
             <Progress value={91} className="h-2" />
           </div>
         </div>
-      </GlowCard>
+      </HoverEffectCard>
 
       <div className="grid gap-6 lg:grid-cols-2">
         {/* Recent Users */}
-        <GlowCard>
+        <HoverEffectCard>
           <div className="flex items-center justify-between mb-4">
             <h2 className="font-semibold text-lg">Recent Users</h2>
             <Link href="/dashboard/users">
@@ -221,10 +221,10 @@ export function AdminDashboard() {
               </div>
             ))}
           </div>
-        </GlowCard>
+        </HoverEffectCard>
 
         {/* Recent Events */}
-        <GlowCard>
+        <HoverEffectCard>
           <div className="flex items-center justify-between mb-4">
             <h2 className="font-semibold text-lg">Recent Events</h2>
             <Link href="/dashboard/events">
@@ -267,11 +267,11 @@ export function AdminDashboard() {
               </div>
             ))}
           </div>
-        </GlowCard>
+        </HoverEffectCard>
       </div>
 
       {/* Quick Actions */}
-      <GlowCard>
+      <HoverEffectCard>
         <h2 className="font-semibold text-lg mb-4">Quick Actions</h2>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           <Link href="/dashboard/users">
@@ -331,7 +331,7 @@ export function AdminDashboard() {
             </Button>
           </Link>
         </div>
-      </GlowCard>
+      </HoverEffectCard>
     </div>
   );
 }

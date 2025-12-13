@@ -19,7 +19,7 @@ export function CTASection() {
             </h2>
             <p className="mt-6 text-lg text-white/80 leading-relaxed max-w-xl mx-auto">
               Join thousands of people who have discovered new friends, hobbies, and unforgettable experiences through
-              EventHub.
+              EventMate.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/register">

@@ -2,7 +2,7 @@
 
 "use client";
 
-import { GlowCard } from "@/components/glow-card";
+import { HoverEffectCard } from "@/components/hoverEffect-card";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
@@ -222,7 +222,7 @@ export default function BecomeHostPage() {
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {benefits.map((benefit) => (
-              <GlowCard key={benefit.title} className="text-center p-6">
+              <HoverEffectCard key={benefit.title} className="text-center p-6">
                 <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
                   <benefit.icon className="h-6 w-6 text-primary" />
                 </div>
@@ -230,13 +230,13 @@ export default function BecomeHostPage() {
                 <p className="mt-2 text-sm text-muted-foreground">
                   {benefit.description}
                 </p>
-              </GlowCard>
+              </HoverEffectCard>
             ))}
           </div>
         </div>
 
         {/* Application Form */}
-        <GlowCard className="max-w-2xl mx-auto">
+        <HoverEffectCard className="max-w-2xl mx-auto">
           <h2 className="text-xl font-semibold mb-6">Host Application</h2>
 
           {!user ? (
@@ -353,7 +353,7 @@ export default function BecomeHostPage() {
               </form>
             </Form>
           )}
-        </GlowCard>
+        </HoverEffectCard>
       </div>
     </div>
   );

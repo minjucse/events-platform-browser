@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { GlowCard } from "@/components/glow-card";
+import { HoverEffectCard } from "@/components/hoverEffect-card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -133,7 +133,7 @@ export default function RevenuePage() {
         {/* Stats Cards */}
         {stats && (
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-8">
-            <GlowCard>
+            <HoverEffectCard>
               <div className="flex items-center gap-4">
                 <div className="rounded-full bg-primary/10 p-3">
                   <DollarSign className="h-6 w-6 text-primary" />
@@ -143,9 +143,9 @@ export default function RevenuePage() {
                   <p className="text-2xl font-bold">${stats.totalRevenue?.toFixed(2) || "0.00"}</p>
                 </div>
               </div>
-            </GlowCard>
+            </HoverEffectCard>
 
-            <GlowCard>
+            <HoverEffectCard>
               <div className="flex items-center gap-4">
                 <div className="rounded-full bg-blue-500/10 p-3">
                   <CreditCard className="h-6 w-6 text-blue-500" />
@@ -155,9 +155,9 @@ export default function RevenuePage() {
                   <p className="text-2xl font-bold">{stats.totalTransactions || 0}</p>
                 </div>
               </div>
-            </GlowCard>
+            </HoverEffectCard>
 
-            <GlowCard>
+            <HoverEffectCard>
               <div className="flex items-center gap-4">
                 <div className="rounded-full bg-green-500/10 p-3">
                   <TrendingUp className="h-6 w-6 text-green-500" />
@@ -167,9 +167,9 @@ export default function RevenuePage() {
                   <p className="text-2xl font-bold">{stats.completedPayments || 0}</p>
                 </div>
               </div>
-            </GlowCard>
+            </HoverEffectCard>
 
-            <GlowCard>
+            <HoverEffectCard>
               <div className="flex items-center gap-4">
                 <div className="rounded-full bg-yellow-500/10 p-3">
                   <Users className="h-6 w-6 text-yellow-500" />
@@ -179,12 +179,12 @@ export default function RevenuePage() {
                   <p className="text-2xl font-bold">{stats.pendingPayments || 0}</p>
                 </div>
               </div>
-            </GlowCard>
+            </HoverEffectCard>
           </div>
         )}
 
         {/* Filters */}
-        <GlowCard className="mb-6">
+        <HoverEffectCard className="mb-6">
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
@@ -209,10 +209,10 @@ export default function RevenuePage() {
               </SelectContent>
             </Select>
           </div>
-        </GlowCard>
+        </HoverEffectCard>
 
         {/* Payments Table */}
-        <GlowCard>
+        <HoverEffectCard>
           <div className="overflow-x-auto">
             <Table>
               <TableHeader>
@@ -271,7 +271,7 @@ export default function RevenuePage() {
               </TableBody>
             </Table>
           </div>
-        </GlowCard>
+        </HoverEffectCard>
       </div>
     </div>
   );

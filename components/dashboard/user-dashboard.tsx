@@ -1,7 +1,7 @@
 "use client";
 
 import { EventCard } from "@/components/event-card";
-import { GlowCard } from "@/components/glow-card";
+import { HoverEffectCard } from "@/components/hoverEffect-card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
@@ -109,7 +109,7 @@ export function UserDashboard() {
       {/* Stats Grid */}
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {stats.map((stat) => (
-          <GlowCard key={stat.label} className="p-5">
+          <HoverEffectCard key={stat.label} className="p-5">
             <div className="flex items-center justify-between">
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
                 <stat.icon className="h-5 w-5 text-primary" />
@@ -122,13 +122,13 @@ export function UserDashboard() {
               <p className="text-2xl font-bold">{stat.value}</p>
               <p className="text-sm text-muted-foreground">{stat.label}</p>
             </div>
-          </GlowCard>
+          </HoverEffectCard>
         ))}
       </div>
 
       {/* Activity Progress */}
       {userStats && (
-        <GlowCard>
+        <HoverEffectCard>
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
             <div>
               <h2 className="font-semibold text-lg">Monthly Activity</h2>
@@ -151,7 +151,7 @@ export function UserDashboard() {
             {userStats.monthlyEventsParticipants || 0} events participated this
             month
           </p>
-        </GlowCard>
+        </HoverEffectCard>
       )}
 
       {/* Upcoming Events */}
@@ -171,7 +171,7 @@ export function UserDashboard() {
             ))}
           </div>
         ) : (
-          <GlowCard className="text-center py-12">
+          <HoverEffectCard className="text-center py-12">
             <Calendar className="h-12 w-12 text-muted-foreground/50 mx-auto mb-4" />
             <h3 className="font-semibold">No upcoming events</h3>
             <p className="text-sm text-muted-foreground mt-1">
@@ -180,7 +180,7 @@ export function UserDashboard() {
             <Link href="/events">
               <Button className="mt-4">Browse Events</Button>
             </Link>
-          </GlowCard>
+          </HoverEffectCard>
         )}
       </div>
 

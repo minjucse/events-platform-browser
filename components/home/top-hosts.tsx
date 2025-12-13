@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Star, MapPin, Calendar } from "lucide-react"
-import { GlowCard } from "@/components/glow-card"
+import { HoverEffectCard } from "@/components/hoverEffect-card"
 import { Badge } from "@/components/ui/badge"
 import { mockUsers, mockEvents } from "@/lib/mock-data"
 
@@ -25,7 +25,7 @@ export function TopHosts() {
             const hostedEvents = mockEvents.filter((e) => e.eventCategory === host.id).length
             return (
               <Link key={host.id} href={`/profile/${host.id}`}>
-                <GlowCard className="group flex flex-col items-center text-center cursor-pointer">
+                <HoverEffectCard className="group flex flex-col items-center text-center cursor-pointer">
                   <div className="relative mb-4">
                     <div className="relative h-24 w-24 overflow-hidden rounded-full ring-4 ring-primary/20">
                       <Image
@@ -74,7 +74,7 @@ export function TopHosts() {
                       </Badge>
                     ))}
                   </div>
-                </GlowCard>
+                </HoverEffectCard>
               </Link>
             )
           })}

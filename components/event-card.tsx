@@ -1,6 +1,6 @@
 "use client";
 
-import { GlowCard } from "@/components/glow-card";
+import { HoverEffectCard } from "@/components/hoverEffect-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import type { Event } from "@/lib/types";
@@ -88,7 +88,7 @@ export function EventCard({ event, className }: EventCardProps) {
 
   return (
     <Link href={`/events/${event.id}`}>
-      <GlowCard
+      <HoverEffectCard
         className={cn("group overflow-hidden p-0 cursor-pointer", className)}
       >
         <div className="relative aspect-16/10 overflow-hidden">
@@ -182,7 +182,7 @@ export function EventCard({ event, className }: EventCardProps) {
             </div>
           </div>
         </div>
-      </GlowCard>
+      </HoverEffectCard>
     </Link>
   );
 }

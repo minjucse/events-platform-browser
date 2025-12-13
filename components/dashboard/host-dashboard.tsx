@@ -1,6 +1,6 @@
 "use client";
 
-import { GlowCard } from "@/components/glow-card";
+import { HoverEffectCard } from "@/components/hoverEffect-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -115,20 +115,20 @@ export function HostDashboard() {
             Manage your events and track performance
           </p>
         </div>
-        <GlowCard className="px-3 py-2">
+        <HoverEffectCard className="px-3 py-2">
           <Link href="/dashboard/events/create">
             <Button className="gap-2">
               <Plus className="h-4 w-4" />
               Create Event
             </Button>
           </Link>
-        </GlowCard>
+        </HoverEffectCard>
       </div>
 
       {/* Stats Grid */}
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {stats.map((stat) => (
-          <GlowCard key={stat.label} className="p-5">
+          <HoverEffectCard key={stat.label} className="p-5">
             <div className="flex items-center justify-between">
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
                 <stat.icon className="h-5 w-5 text-primary" />
@@ -145,13 +145,13 @@ export function HostDashboard() {
               <p className="text-2xl font-bold">{stat.value}</p>
               <p className="text-sm text-muted-foreground">{stat.label}</p>
             </div>
-          </GlowCard>
+          </HoverEffectCard>
         ))}
       </div>
 
       <div className="grid gap-6 lg:grid-cols-2">
         {/* Upcoming Events */}
-        <GlowCard>
+        <HoverEffectCard>
           <div className="flex items-center justify-between mb-4">
             <h2 className="font-semibold text-lg">Upcoming Events</h2>
             <Link href="/dashboard/my-events">
@@ -198,10 +198,10 @@ export function HostDashboard() {
               </div>
             )}
           </div>
-        </GlowCard>
+        </HoverEffectCard>
 
         {/* Recent Reviews */}
-        <GlowCard>
+        <HoverEffectCard>
           <div className="flex items-center justify-between mb-4">
             <h2 className="font-semibold text-lg">Recent Reviews</h2>
             <Link href="/dashboard/reviews">
@@ -248,7 +248,7 @@ export function HostDashboard() {
               </div>
             )}
           </div>
-        </GlowCard>
+        </HoverEffectCard>
       </div>
     </div>
   );

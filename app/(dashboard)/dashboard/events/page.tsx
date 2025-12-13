@@ -1,6 +1,6 @@
 "use client";
 
-import { GlowCard } from "@/components/glow-card";
+import { HoverEffectCard } from "@/components/hoverEffect-card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -118,13 +118,13 @@ export default function ManageEventsPage() {
 
   if (currentUser?.role !== "ADMIN" && currentUser?.role !== "HOST") {
     return (
-      <GlowCard className="text-center py-12">
+      <HoverEffectCard className="text-center py-12">
         <Shield className="h-12 w-12 text-muted-foreground/50 mx-auto mb-4" />
         <h3 className="font-semibold">Access Denied</h3>
         <p className="text-sm text-muted-foreground mt-1">
           You don't have permission to view this page
         </p>
-      </GlowCard>
+      </HoverEffectCard>
     );
   }
 
@@ -149,7 +149,7 @@ export default function ManageEventsPage() {
           </p>
         </div>
         <div className="flex items-center gap-2">
-          <GlowCard className="px-3 py-2">
+          <HoverEffectCard className="px-3 py-2">
             <Link
               href="/dashboard/events/create"
               className="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
@@ -157,7 +157,7 @@ export default function ManageEventsPage() {
               <Plus className="h-4 w-4 mr-2" />
               Create Event
             </Link>
-          </GlowCard>
+          </HoverEffectCard>
         </div>
       </div>
 
@@ -186,10 +186,10 @@ export default function ManageEventsPage() {
               color: "text-blue-500",
             },
           ].map((stat) => (
-            <GlowCard key={stat.label} className="p-4">
+            <HoverEffectCard key={stat.label} className="p-4">
               <p className={`text-2xl font-bold ${stat.color}`}>{stat.value}</p>
               <p className="text-sm text-muted-foreground">{stat.label}</p>
-            </GlowCard>
+            </HoverEffectCard>
           ))}
         </div>
       )}
@@ -231,7 +231,7 @@ export default function ManageEventsPage() {
       </div>
 
       {/* Events Table */}
-      <GlowCard className="p-0 overflow-hidden">
+      <HoverEffectCard className="p-0 overflow-hidden">
         <div className="overflow-x-auto">
           <Table>
             <TableHeader>
@@ -373,7 +373,7 @@ export default function ManageEventsPage() {
             </TableBody>
           </Table>
         </div>
-      </GlowCard>
+      </HoverEffectCard>
 
       {/* Pagination */}
       {meta.total > meta.limit && (

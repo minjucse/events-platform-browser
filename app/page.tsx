@@ -5,7 +5,6 @@ import { FeaturedEvents } from "@/components/home/featured-events"
 import { HowItWorks } from "@/components/home/how-it-works"
 import { EventCategories } from "@/components/home/event-categories"
 import { TopHosts } from "@/components/home/top-hosts"
-import { Testimonials } from "@/components/home/testimonials"
 import { WhyChooseUs } from "@/components/home/why-choose-us"
 import { CTASection } from "@/components/home/cta-section"
 
@@ -19,7 +18,6 @@ export default function HomePage() {
         <HowItWorks />
         <EventCategories />
         <TopHosts />
-        <Testimonials />
         <WhyChooseUs />
         <CTASection />
       </main>

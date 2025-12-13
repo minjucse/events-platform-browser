@@ -2,7 +2,7 @@
 
 import type React from "react";
 
-import { GlowCard } from "@/components/glow-card";
+import { HoverEffectCard } from "@/components/hoverEffect-card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -197,7 +197,7 @@ export default function CreateEventPage() {
 
         <form onSubmit={handleSubmit} className="space-y-8">
           {/* Event Image */}
-          <GlowCard>
+          <HoverEffectCard>
             <Label className="text-base font-semibold">Event Image</Label>
             <p className="text-sm text-muted-foreground mb-4">
               Add a compelling image that represents your event
@@ -239,10 +239,10 @@ export default function CreateEventPage() {
                 </label>
               )}
             </div>
-          </GlowCard>
+          </HoverEffectCard>
 
           {/* Basic Info */}
-          <GlowCard>
+          <HoverEffectCard>
             <Label className="text-base font-semibold">Basic Information</Label>
             <div className="mt-4 space-y-4">
               <div className="space-y-2">
@@ -294,10 +294,10 @@ export default function CreateEventPage() {
                 </Select>
               </div>
             </div>
-          </GlowCard>
+          </HoverEffectCard>
 
           {/* Date & Time */}
-          <GlowCard>
+          <HoverEffectCard>
             <Label className="text-base font-semibold">Date & Time</Label>
             <div className="mt-4 grid gap-4 sm:grid-cols-2">
               <div className="space-y-2">
@@ -334,10 +334,10 @@ export default function CreateEventPage() {
                 </div>
               </div>
             </div>
-          </GlowCard>
+          </HoverEffectCard>
 
           {/* Location */}
-          <GlowCard>
+          <HoverEffectCard>
             <Label className="text-base font-semibold">Location</Label>
             <div className="mt-4 space-y-2">
               <Label htmlFor="location">Venue *</Label>
@@ -355,10 +355,10 @@ export default function CreateEventPage() {
                 />
               </div>
             </div>
-          </GlowCard>
+          </HoverEffectCard>
 
           {/* Participants & Price */}
-          <GlowCard>
+          <HoverEffectCard>
             <Label className="text-base font-semibold">
               Participants & Pricing
             </Label>
@@ -424,7 +424,7 @@ export default function CreateEventPage() {
                 </p>
               </div>
             </div>
-          </GlowCard>
+          </HoverEffectCard>
 
           {/* Submit */}
           <div className="flex gap-4">

@@ -201,12 +201,7 @@ export function Navbar() {
                       Manage Events
                     </Link>
                   </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link href="/dashboard/reports" className="flex items-center gap-2 cursor-pointer text-gray-300 hover:text-white hover:bg-cyan-500/20">
-                      <LayoutDashboard className="h-4 w-4" />
-                      Reports
-                    </Link>
-                  </DropdownMenuItem>
+                 
                 </DropdownMenuContent>
               </DropdownMenu>
             )}

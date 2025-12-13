@@ -1,5 +1,5 @@
 import { Shield, Users, Zap, Heart, Globe, Award } from "lucide-react"
-import { GlowCard } from "@/components/glow-card"
+import { HoverEffectCard } from "@/components/hoverEffect-card"
 
 const features = [
   {
@@ -40,7 +40,7 @@ export function WhyChooseUs() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Why Choose <span className="gradient-text">EventHub</span>
+            Why Choose <span className="gradient-text">EventMate</span>
           </h2>
           <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
             We're more than just an event platform. We're a community built on trust, genuine connections, and
@@ -50,7 +50,7 @@ export function WhyChooseUs() {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
-            <GlowCard key={index} className="group">
+            <HoverEffectCard key={index} className="group">
               <div className="flex items-start gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
                   <feature.icon className="h-6 w-6 text-primary" />
@@ -60,7 +60,7 @@ export function WhyChooseUs() {
                   <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
                 </div>
               </div>
-            </GlowCard>
+            </HoverEffectCard >
           ))}
         </div>
       </div>

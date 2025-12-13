@@ -4,7 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { GlowCard } from "@/components/glow-card"
+import { HoverEffectCard } from "@/components/hoverEffect-card"
 
 const testimonials = [
   {
@@ -13,7 +13,7 @@ const testimonials = [
     role: "Software Engineer",
     avatar: "/professional-man-headshot.png",
     rating: 5,
-    text: "EventHub changed my social life completely. I moved to a new city knowing no one, and within a month I had a whole group of friends through hiking and tech events. The hosts are amazing and the events are well-organized.",
+    text: "EventMate changed my social life completely. I moved to a new city knowing no one, and within a month I had a whole group of friends through hiking and tech events. The hosts are amazing and the events are well-organized.",
     event: "Tech Networking & Hiking",
   },
   {
@@ -40,7 +40,7 @@ const testimonials = [
     role: "Yoga Instructor",
     avatar: "/young-woman-smiling-headshot.png",
     rating: 5,
-    text: "I started hosting wellness events through EventHub and the response has been incredible. The platform makes it easy to manage participants and payments. My community has grown 10x!",
+    text: "I started hosting wellness events through EventMate and the response has been incredible. The platform makes it easy to manage participants and payments. My community has grown 10x!",
     event: "Morning Yoga Sessions",
   },
 ]
@@ -59,14 +59,14 @@ export function Testimonials() {
             What Our <span className="gradient-text">Community</span> Says
           </h2>
           <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-            Real stories from real people who found their tribe through EventHub
+            Real stories from real people who found their tribe through EventMate
           </p>
         </div>
 
         {/* Desktop Grid */}
         <div className="hidden lg:grid lg:grid-cols-2 gap-6">
           {testimonials.map((testimonial) => (
-            <GlowCard key={testimonial.id} className="relative">
+            <HoverEffectCard key={testimonial.id} className="relative">
               <Quote className="absolute right-6 top-6 h-10 w-10 text-primary/10" />
               <div className="flex gap-4">
                 <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full">
@@ -89,13 +89,13 @@ export function Testimonials() {
               </div>
               <p className="mt-4 text-muted-foreground leading-relaxed">"{testimonial.text}"</p>
               <p className="mt-4 text-sm font-medium text-primary">Attended: {testimonial.event}</p>
-            </GlowCard>
+            </HoverEffectCard>
           ))}
         </div>
 
         {/* Mobile Carousel */}
         <div className="lg:hidden">
-          <GlowCard className="relative">
+          <HoverEffectCard className="relative">
             <Quote className="absolute right-6 top-6 h-10 w-10 text-primary/10" />
             <div className="flex gap-4">
               <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full">
@@ -118,7 +118,7 @@ export function Testimonials() {
             </div>
             <p className="mt-4 text-muted-foreground leading-relaxed">"{testimonials[current].text}"</p>
             <p className="mt-4 text-sm font-medium text-primary">Attended: {testimonials[current].event}</p>
-          </GlowCard>
+          </HoverEffectCard>
 
           <div className="mt-6 flex items-center justify-center gap-4">
             <Button variant="outline" size="icon" onClick={prev}>

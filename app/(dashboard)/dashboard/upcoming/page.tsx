@@ -1,7 +1,7 @@
 "use client";
 
 import { EventCard } from "@/components/event-card";
-import { GlowCard } from "@/components/glow-card";
+import { HoverEffectCard } from "@/components/hoverEffect-card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -86,7 +86,7 @@ export default function UpcomingEventsPage() {
       {isLoading ? (
         <div className="text-center py-8">Loading events...</div>
       ) : events.length === 0 ? (
-        <GlowCard className="text-center py-12">
+        <HoverEffectCard className="text-center py-12">
           <Calendar className="h-12 w-12 text-muted-foreground/50 mx-auto mb-4" />
           <h3 className="font-semibold">No upcoming events found</h3>
           <p className="text-sm text-muted-foreground mt-1">
@@ -95,7 +95,7 @@ export default function UpcomingEventsPage() {
           <Link href="/events">
             <Button className="mt-4">Browse All Events</Button>
           </Link>
-        </GlowCard>
+        </HoverEffectCard>
       ) : (
         <>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

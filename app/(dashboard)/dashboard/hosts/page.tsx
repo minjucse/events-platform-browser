@@ -1,6 +1,6 @@
 "use client";
 
-import { GlowCard } from "@/components/glow-card";
+import { HoverEffectCard } from "@/components/hoverEffect-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -98,13 +98,13 @@ export default function ManageHostsPage() {
 
   if (currentUser?.role !== "ADMIN") {
     return (
-      <GlowCard className="text-center py-12">
+      <HoverEffectCard className="text-center py-12">
         <Shield className="h-12 w-12 text-muted-foreground/50 mx-auto mb-4" />
         <h3 className="font-semibold">Access Denied</h3>
         <p className="text-sm text-muted-foreground mt-1">
           You don't have permission to view this page
         </p>
-      </GlowCard>
+      </HoverEffectCard>
     );
   }
 
@@ -119,7 +119,7 @@ export default function ManageHostsPage() {
 
       {/* Stats */}
       <div className="grid gap-4 sm:grid-cols-3">
-        <GlowCard className="p-5">
+        <HoverEffectCard className="p-5">
           <div className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
               <Shield className="h-5 w-5 text-primary" />
@@ -129,8 +129,8 @@ export default function ManageHostsPage() {
               <p className="text-sm text-muted-foreground">Total Hosts</p>
             </div>
           </div>
-        </GlowCard>
-        <GlowCard className="p-5">
+        </HoverEffectCard>
+        <HoverEffectCard className="p-5">
           <div className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-500/10">
               <CheckCircle className="h-5 w-5 text-green-500" />
@@ -142,8 +142,8 @@ export default function ManageHostsPage() {
               <p className="text-sm text-muted-foreground">Pending Requests</p>
             </div>
           </div>
-        </GlowCard>
-        <GlowCard className="p-5">
+        </HoverEffectCard>
+        <HoverEffectCard className="p-5">
           <div className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-500/10">
               <Star className="h-5 w-5 text-amber-500" />
@@ -155,7 +155,7 @@ export default function ManageHostsPage() {
               <p className="text-sm text-muted-foreground">Avg Rating</p>
             </div>
           </div>
-        </GlowCard>
+        </HoverEffectCard>
       </div>
 
       {/* Search */}
@@ -173,7 +173,7 @@ export default function ManageHostsPage() {
       </div>
 
       {/* Hosts Table */}
-      <GlowCard className="p-0 overflow-hidden">
+      <HoverEffectCard className="p-0 overflow-hidden">
         <div className="overflow-x-auto">
           <Table>
             <TableHeader>
@@ -294,7 +294,7 @@ export default function ManageHostsPage() {
             </TableBody>
           </Table>
         </div>
-      </GlowCard>
+      </HoverEffectCard>
 
       {/* Pagination */}
       {meta.total > meta.limit && (

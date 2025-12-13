@@ -1,6 +1,6 @@
 "use client";
 
-import { GlowCard } from "@/components/glow-card";
+import { HoverEffectCard } from "@/components/hoverEffect-card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, CheckCircle } from "lucide-react";
 import Link from "next/link";
@@ -20,7 +20,7 @@ export default function PaymentSuccess() {
   return (
     <div className="min-h-screen flex items-center justify-center py-12 px-4">
       <div className="max-w-md w-full">
-        <GlowCard className="text-center p-8">
+        <HoverEffectCard className="text-center p-8">
           <div className="space-y-6">
             <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
               <CheckCircle className="w-8 h-8 text-green-600" />
@@ -54,7 +54,7 @@ export default function PaymentSuccess() {
               </Button>
             </div>
           </div>
-        </GlowCard>
+        </HoverEffectCard>
       </div>
     </div>
   );

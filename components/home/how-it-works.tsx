@@ -1,5 +1,5 @@
 import { Search, UserPlus, Calendar, PartyPopper } from "lucide-react"
-import { GlowCard } from "@/components/glow-card"
+import { HoverEffectCard } from "@/components/hoverEffect-card"
 
 const steps = [
   {
@@ -39,7 +39,7 @@ export function HowItWorks() {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, index) => (
-            <GlowCard key={index} className="relative text-center">
+            <HoverEffectCard key={index} className="relative text-center">
               <div className="absolute -top-4 left-4 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
                 {index + 1}
               </div>
@@ -50,7 +50,7 @@ export function HowItWorks() {
                 <h3 className="mb-2 text-lg font-semibold">{step.title}</h3>
                 <p className="text-sm text-muted-foreground">{step.description}</p>
               </div>
-            </GlowCard>
+            </HoverEffectCard>
           ))}
         </div>
       </div>

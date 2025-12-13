@@ -1,6 +1,6 @@
 "use client";
 
-import { GlowCard } from "@/components/glow-card";
+import { HoverEffectCard } from "@/components/hoverEffect-card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -34,7 +34,7 @@ export default function ProfilePage() {
         </Button>
 
         {/* Profile Header */}
-        <GlowCard className="relative overflow-hidden">
+        <HoverEffectCard className="relative overflow-hidden">
           <div className="absolute inset-x-0 top-0 h-32 bg-linear-to-r from-primary/20 via-accent/20 to-primary/20" />
 
           <div className="relative pt-16 pb-6 px-6">
@@ -151,7 +151,7 @@ export default function ProfilePage() {
               </div>
             </div>
           </div>
-        </GlowCard>
+        </HoverEffectCard>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-8">
           <TabsList className="grid w-full grid-cols-2">
@@ -160,7 +160,7 @@ export default function ProfilePage() {
           </TabsList>
 
           <TabsContent value="about" className="mt-6">
-            <GlowCard>
+            <HoverEffectCard>
               <div className="space-y-6">
                 <div>
                   <h3 className="font-semibold mb-2">About</h3>
@@ -208,11 +208,11 @@ export default function ProfilePage() {
                   </div>
                 </div>
               </div>
-            </GlowCard>
+            </HoverEffectCard>
           </TabsContent>
 
           <TabsContent value="details" className="mt-6">
-            <GlowCard>
+            <HoverEffectCard>
               <div className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -269,7 +269,7 @@ export default function ProfilePage() {
                   </div>
                 </div>
               </div>
-            </GlowCard>
+            </HoverEffectCard>
           </TabsContent>
         </Tabs>
       </div>

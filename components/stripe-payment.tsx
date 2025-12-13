@@ -9,7 +9,7 @@ import {
   useElements,
 } from "@stripe/react-stripe-js";
 import { Button } from "@/components/ui/button";
-import { GlowCard } from "@/components/glow-card";
+import { HoverEffectCard } from "@/components/hoverEffect-card";
 import { paymentApi } from "@/lib/paymentApi";
 import { toast } from "sonner";
 
@@ -70,7 +70,7 @@ function PaymentForm({ clientSecret, amount, eventTitle, onSuccess, onCancel }: 
   };
 
   return (
-    <GlowCard className="p-6">
+    <HoverEffectCard className="p-6">
       <div className="space-y-4">
         <div className="text-center">
           <h3 className="text-lg font-semibold">Complete Payment</h3>
@@ -114,7 +114,7 @@ function PaymentForm({ clientSecret, amount, eventTitle, onSuccess, onCancel }: 
           </div>
         </form>
       </div>
-    </GlowCard>
+    </HoverEffectCard>
   );
 }
 

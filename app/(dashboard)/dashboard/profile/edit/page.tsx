@@ -2,7 +2,7 @@
 
 import type React from "react";
 
-import { GlowCard } from "@/components/glow-card";
+import { HoverEffectCard } from "@/components/hoverEffect-card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -128,7 +128,7 @@ export default function EditProfilePage() {
 
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Profile Image */}
-          <GlowCard>
+          <HoverEffectCard>
             <Label className="text-base font-semibold">Profile Photo</Label>
             <div className="mt-4 flex items-center gap-6">
               <div className="relative h-24 w-24 rounded-xl overflow-hidden bg-muted">
@@ -170,10 +170,10 @@ export default function EditProfilePage() {
                 </p>
               </div>
             </div>
-          </GlowCard>
+          </HoverEffectCard>
 
           {/* Basic Info */}
-          <GlowCard>
+          <HoverEffectCard>
             <Label className="text-base font-semibold">Basic Information</Label>
             <div className="mt-4 space-y-4">
               <div className="space-y-2">
@@ -225,10 +225,10 @@ export default function EditProfilePage() {
                 </p>
               </div>
             </div>
-          </GlowCard>
+          </HoverEffectCard>
 
           {/* Interests */}
-          <GlowCard>
+          <HoverEffectCard>
             <Label className="text-base font-semibold">Interests</Label>
             <p className="text-sm text-muted-foreground mt-1 mb-4">
               Select your interests to help find events and connect with others
@@ -264,7 +264,7 @@ export default function EditProfilePage() {
                   </Badge>
                 ))}
             </div>
-          </GlowCard>
+          </HoverEffectCard>
 
           {/* Submit */}
           <div className="flex gap-4">

@@ -34,7 +34,6 @@ import {
   Plus,
   Settings,
   Shield,
-  Sparkles,
   Star,
   UserCheck2,
   UserCog,
@@ -82,18 +81,18 @@ export function DashboardSidebar() {
     user?.role === "ADMIN"
       ? adminNavItems
       : user?.role === "HOST"
-      ? hostNavItems
-      : userNavItems;
+        ? hostNavItems
+        : userNavItems;
 
   return (
     <Sidebar className="border-r border-sidebar-border " collapsible="icon">
       <SidebarHeader className="border-b border-sidebar-border p-4">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-            <Sparkles className="h-4 w-4 text-primary-foreground" />
+        <Link href="/" className="flex items-center gap-2 mr-8 flex-shrink-0">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-400 to-blue-600 text-white shadow-lg shadow-cyan-400/50">
+            <CalendarCheck className="h-5 w-5" />
           </div>
-          <span className="font-bold text-lg text-sidebar-foreground">
-            EventHub
+          <span className="hidden font-bold sm:inline-block text-lg bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
+            EventMate
           </span>
         </Link>
       </SidebarHeader>
@@ -104,8 +103,8 @@ export function DashboardSidebar() {
             {user?.role === "ADMIN"
               ? "Admin Panel"
               : user?.role === "HOST"
-              ? "Host Dashboard"
-              : "My Dashboard"}
+                ? "Host Dashboard"
+                : "My Dashboard"}
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>

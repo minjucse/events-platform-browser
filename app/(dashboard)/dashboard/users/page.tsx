@@ -1,6 +1,6 @@
 "use client";
 
-import { GlowCard } from "@/components/glow-card";
+import { HoverEffectCard } from "@/components/hoverEffect-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -109,13 +109,13 @@ export default function ManageUsersPage() {
 
   if (currentUser?.role !== "ADMIN") {
     return (
-      <GlowCard className="text-center py-12">
+      <HoverEffectCard className="text-center py-12">
         <Shield className="h-12 w-12 text-muted-foreground/50 mx-auto mb-4" />
         <h3 className="font-semibold">Access Denied</h3>
         <p className="text-sm text-muted-foreground mt-1">
           You don't have permission to view this page
         </p>
-      </GlowCard>
+      </HoverEffectCard>
     );
   }
 
@@ -162,7 +162,7 @@ export default function ManageUsersPage() {
         </Select>
       </div>
 
-      <GlowCard className="p-0 overflow-hidden">
+      <HoverEffectCard className="p-0 overflow-hidden">
         <div className="overflow-x-auto">
           <Table>
             <TableHeader>
@@ -290,7 +290,7 @@ export default function ManageUsersPage() {
             </TableBody>
           </Table>
         </div>
-      </GlowCard>
+      </HoverEffectCard>
 
       {/* Pagination */}
       {meta.total > meta.limit && (

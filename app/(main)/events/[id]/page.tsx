@@ -5,7 +5,7 @@ import {
   endOfDayLocal,
   getEventStartLocal,
 } from "@/app/utils/eventTimeConverter";
-import { GlowCard } from "@/components/glow-card";
+import { HoverEffectCard } from "@/components/hoverEffect-card";
 import { ReviewForm } from "@/components/review-form";
 import { StripePayment } from "@/components/stripe-payment";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -441,7 +441,7 @@ export default function EventDetailPage() {
               {hostReviewsForEvent.length > 0 ? (
                 <div className="space-y-4">
                   {hostReviewsForEvent.map((review) => (
-                    <GlowCard key={review.id} className="p-4">
+                    <HoverEffectCard key={review.id} className="p-4">
                       <div className="flex items-start gap-3">
                         <Avatar>
                           <AvatarImage
@@ -488,11 +488,11 @@ export default function EventDetailPage() {
                           </p>
                         </div>
                       </div>
-                    </GlowCard>
+                    </HoverEffectCard>
                   ))}
                 </div>
               ) : (
-                <GlowCard className="text-center py-8">
+                <HoverEffectCard className="text-center py-8">
                   <Star className="h-10 w-10 text-muted-foreground/50 mx-auto mb-2" />
                   <p className="text-muted-foreground">
                     No reviews for this host yet
@@ -502,7 +502,7 @@ export default function EventDetailPage() {
                       Be the first to review this host!
                     </p>
                   )}
-                </GlowCard>
+                </HoverEffectCard>
               )}
             </div>
           </div>
@@ -511,7 +511,7 @@ export default function EventDetailPage() {
           <div className="lg:col-span-1">
             <div className="sticky top-24 space-y-6">
               {/* Booking Card */}
-              <GlowCard>
+              <HoverEffectCard>
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
                     <div>
@@ -589,10 +589,10 @@ export default function EventDetailPage() {
                     </Button>
                   </div>
                 </div>
-              </GlowCard>
+              </HoverEffectCard>
 
               {/* Host Info */}
-              <GlowCard>
+              <HoverEffectCard>
                 <div className="space-y-4">
                   <h3 className="font-semibold">Hosted by</h3>
                   <div className="flex items-center gap-3">
@@ -615,7 +615,7 @@ export default function EventDetailPage() {
                     <Link href={`/profile/${event.userId}`}>View Profile</Link>
                   </Button>
                 </div>
-              </GlowCard>
+              </HoverEffectCard>
             </div>
           </div>
         </div>

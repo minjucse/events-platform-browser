@@ -11,7 +11,7 @@ import {
   Heart,
   Users,
 } from "lucide-react"
-import { GlowCard } from "@/components/glow-card"
+import { HoverEffectCard } from "@/components/hoverEffect-card"
 
 const categories = [
   { name: "Concerts", icon: Music, color: "text-pink-500", count: 42 },
@@ -42,7 +42,7 @@ export function EventCategories() {
         <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
           {categories.map((category) => (
             <Link key={category.name} href={`/events?category=${category.name.toLowerCase().replace(/ & /g, "-")}`}>
-              <GlowCard className="group flex flex-col items-center gap-3 p-5 text-center hover:bg-secondary/50 transition-colors cursor-pointer">
+              <HoverEffectCard className="group flex flex-col items-center gap-3 p-5 text-center hover:bg-secondary/50 transition-colors cursor-pointer">
                 <div className={`p-3 rounded-xl bg-secondary ${category.color}`}>
                   <category.icon className="h-6 w-6" />
                 </div>
@@ -50,7 +50,7 @@ export function EventCategories() {
                   <h3 className="font-medium text-sm">{category.name}</h3>
                   <p className="text-xs text-muted-foreground">{category.count} events</p>
                 </div>
-              </GlowCard>
+              </HoverEffectCard>
             </Link>
           ))}
         </div>
