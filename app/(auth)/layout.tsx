@@ -1,6 +1,6 @@
 import type React from "react"
 import Link from "next/link"
-import { Sparkles } from "lucide-react"
+import { CalendarCheck } from "lucide-react"
 
 export default function AuthLayout({
   children,
@@ -17,11 +17,13 @@ export default function AuthLayout({
           <div className="absolute bottom-0 right-1/4 h-40 w-40 rounded-full bg-white/10 blur-3xl" />
         </div>
         <div className="relative flex flex-col justify-between p-12 text-white">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/20">
-              <Sparkles className="h-6 w-6" />
+          <Link href="/" className="flex items-center gap-2 mr-8 flex-shrink-0">
+            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-400 to-blue-600 text-white shadow-lg shadow-cyan-400/50">
+              <CalendarCheck className="h-5 w-5" />
             </div>
-            <span className="text-2xl font-bold">EventMate</span>
+            <span className="hidden font-bold sm:inline-block text-lg bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
+              EventMate
+            </span>
           </Link>
 
           <div className="space-y-6">

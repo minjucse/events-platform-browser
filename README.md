@@ -1,10 +1,10 @@
-# EventHub Management System
+# EventMate Management System
 
 A comprehensive event management platform that connects people through local events, activities, and experiences. Built with modern web technologies and featuring role-based access control for seamless event organization and participation.
 
 ## 🌐 Live Demo
 
-**Frontend:** [https://event-hub-management.vercel.app](https://event-hub-management.vercel.app)
+**Frontend:** [https://events-platform-browser.vercel.app](https://events-platform-browser.vercel.app)
 
 ## 📋 Table of Contents
 
@@ -97,7 +97,7 @@ A comprehensive event management platform that connects people through local eve
 ## 🛠 Tech Stack
 
 ### Frontend
-- **Framework:** Next.js 14 (App Router)
+- **Framework:** Next.js 16 (App Router)
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS
 - **UI Components:** Shadcn/ui
@@ -162,8 +162,8 @@ A comprehensive event management platform that connects people through local eve
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Rokon-Khan/events-management-frontend.git
-   cd events-management-frontend
+   git clone https://github.com/minjucse/events-platform-browser
+   cd events-platform-browser
    ```
 
 2. **Install dependencies**
@@ -295,14 +295,8 @@ The frontend integrates with a RESTful API backend featuring:
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for details.
 
-## 👨‍💻 Author
-
-**Rokon Khan**
-- GitHub: [@Rokon-Khan](https://github.com/Rokon-Khan)
-- LinkedIn: [Your LinkedIn Profile]
-- Email: [Your Email]
 
 ## 🙏 Acknowledgments
 
